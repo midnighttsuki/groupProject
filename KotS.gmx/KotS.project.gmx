@@ -5,9 +5,25 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_temp_player</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\movement_collision.gml</script>
+    <script>scripts\check_input.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <objects name="GameControl">
+      <object>objects\obj_game</object>
+      <object>objects\Inputs</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

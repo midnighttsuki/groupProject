@@ -28,7 +28,7 @@
             <string>///Set and declare player var
 anime = 0; ///players
 state = "IDLE" ///Default player set
-playerSpeed = 2; ///sets how many pixels the player will move
+playerSpeed = 5; ///sets how many pixels the player will move
 xFacing = 0;
 yFacing = 0;
 
@@ -63,7 +63,7 @@ player[7] = spr_player_downright;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_state();
+            <string>movement_collision();
 </string>
           </argument>
         </arguments>

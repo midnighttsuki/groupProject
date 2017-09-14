@@ -116,75 +116,7 @@ switch(state)
     
 }
 ///Horizontal movement and collision detects if there is a wall or a ramp then moves player according
-
-//works
-if(place_meeting(x + velX, y, obj_hill_br))
-{
-        plusY = 0;
-    
-    while(place_meeting(x + velX, y - plusY, obj_parWall) && plusY <= abs(velX))
-    {
-        plusY += 1;
-    }
-    if(place_meeting(x + velX, y - plusY, obj_parWall))
-    {
-        while(!place_meeting(x + sign(velX), y, obj_parWall))
-        {
-            obj_player.x += sign(velX);
-        }
-    velX = 0;
-    }
-    else
-    {
-        obj_player.y -= plusY;
-    }
-}
-//works
-if(place_meeting(x + velX, y, obj_hill_bl))
-{
-    plusY = 0;
-    
-    while(place_meeting(x + velX, y - plusY, obj_parWall) && plusY <= abs(velX))
-    {
-        plusY += 1;
-    }
-    if(place_meeting(x + velX, y - plusY, obj_parWall))
-    {
-        while(!place_meeting(x + sign(velX), y, obj_parWall))
-        {
-            obj_player.x += sign(velX);
-        }
-    velX = 0;
-    }
-    else
-    {
-        obj_player.y -= plusY;
-    }
-}
-//not working
-if(place_meeting(x + velX, y, obj_hill_tr))
-{
-    plusY = 0;
-    
-    while(place_meeting(x + velX, y - plusY, obj_parWall) && plusY <= abs(velX))
-    {
-        plusY += 1;
-    }
-    if(place_meeting(x + velX, y - plusY, obj_parWall))
-    {
-        while(!place_meeting(x + sign(velX), y, obj_parWall))
-        {
-            obj_player.x += sign(velX);
-        }
-    velX = 0;
-    }
-    else
-    {
-        obj_player.y += plusY;
-    }
-}
-//not working
-if(place_meeting(x + velX, y, obj_hill_tl))
+if(place_meeting(x + velX, y, obj_hill_tr) || place_meeting(x + velX, y, obj_hill_tl))
 {
     plusY = 0;
     
@@ -205,8 +137,7 @@ if(place_meeting(x + velX, y, obj_hill_tl))
         obj_player.y += plusY;
     }
 }
-//works
-if(place_meeting(x + velX, y, obj_wall))
+if(place_meeting(x + velX, y, obj_parWall))
 {
     plusY = 0;
     
@@ -229,31 +160,8 @@ if(place_meeting(x + velX, y, obj_wall))
 }
 obj_player.x += velX;
 
-/* if(place_meeting(x + velX, y, obj_parWall))
-{
-    plusY = 0;
-    
-    while(place_meeting(x + velX, y - plusY, obj_parWall) && plusY <= abs(velX))
-    {
-        plusY += 1;
-    }
-    if(place_meeting(x + velX, y - plusY, obj_parWall))
-    {
-        while(!place_meeting(x + sign(velX), y, obj_parWall))
-        {
-        obj_player.x += sign(velX);
-    }
-    velX = 0;
-    }
-    else
-    {
-        obj_player.y -= plusY;
-    }
-}
-obj_player.x += velX; */
-
 ///Vertical movement and collision detects if there is a wall or a ramp then moves player according
-if(place_meeting(x, y + velY, obj_hill_br))
+/* if(place_meeting(x, y + velY, obj_hill_br))
 {
     
 }
@@ -268,9 +176,29 @@ if(place_meeting(x, y + velY, obj_hill_tl))
 }
 if(place_meeting(x, y + velY, obj_wall))
 {
+} */
+if(place_meeting(x, y + velY, obj_hill_tl) || place_meeting(x, y + velY, obj_hill_bl))
+{
+    plusX = 0;
+    while(place_meeting(x + plusX, y + velY, obj_parWall) && plusX <= abs(velY))
+    {
+        plusX += 1;
+    }
+    if(place_meeting(x + plusX, y + velY, obj_parWall))
+    {
+        while(!place_meeting(x, y + sign(velY), obj_parWall))
+        {
+            obj_player.y += sign(velY);
+        }
+        velY = 0;
+    }
+    else
+    {
+        
+        obj_player.x += plusX;
+    }
 }
-
-/*if(place_meeting(x, y + velY, obj_parWall))
+if(place_meeting(x, y + velY, obj_parWall))
 {
     plusX = 0;
     while(place_meeting(x - plusX, y + velY, obj_parWall) && plusX <= abs(velY))
@@ -291,5 +219,5 @@ if(place_meeting(x, y + velY, obj_wall))
         obj_player.x -= plusX;
     }
     
-}*/
+}
 obj_player.y += velY;

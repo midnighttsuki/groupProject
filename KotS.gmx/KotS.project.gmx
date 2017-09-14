@@ -16,12 +16,19 @@
       <sprite>sprites\spr_player_downleft</sprite>
       <sprite>sprites\spr_player_downright</sprite>
     </sprites>
+    <sprites name="collisionWalls">
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_hill_br</sprite>
+      <sprite>sprites\spr_hill_bl</sprite>
+      <sprite>sprites\spr_hill_tl</sprite>
+      <sprite>sprites\spr_hill_tr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="player">
-      <script>scripts\player_state.gml</script>
+      <script>scripts\movement_collision.gml</script>
       <script>scripts\check_input.gml</script>
     </scripts>
   </scripts>
@@ -30,6 +37,14 @@
     <objects name="GameControl">
       <object>objects\obj_game</object>
       <object>objects\Inputs</object>
+    </objects>
+    <objects name="collisionWalls">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_hill_br</object>
+      <object>objects\obj_hill_bl</object>
+      <object>objects\obj_hill_tl</object>
+      <object>objects\obj_hill_tr</object>
+      <object>objects\obj_parWall</object>
     </objects>
   </objects>
   <rooms name="rooms">

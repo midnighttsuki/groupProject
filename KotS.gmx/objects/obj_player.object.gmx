@@ -29,8 +29,8 @@
 anime = 0; ///players
 state = "IDLE" ///Default player set
 playerSpeed = 5; ///sets how many pixels the player will move
-xFacing = 0;
-yFacing = 0;
+velX = 0;
+velY= 0;
 
 ///Puts all player sprites in one array for easier access
 player[0] = spr_player_up;

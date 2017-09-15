@@ -39,6 +39,10 @@ if(Inputs.down && Inputs.right)
     
     obj_player.state = "DOWNRIGHT";
 }
+if(Inputs.up && Inputs.down || Inputs.left && Inputs.right)
+{
+    obj_player.state = "IDLE";
+}
 if(!Inputs.up && !Inputs.down && !Inputs.left && !Inputs.right)
 {
     obj_player.state = "IDLE";

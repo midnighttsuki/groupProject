@@ -1,12 +1,14 @@
 ///movement_collision();
+
+///Checks the state the player is in. Then switch the sprite and vel to corresponding direction.
 switch(state) 
 {
     case "IDLE":
     {
         
         image_speed = 0;
-        velX = 0;
-        velY = 0;
+        obj_player.velX = 0;
+        obj_player.velY = 0;
         
         check_input();
         break;
@@ -158,22 +160,6 @@ if(place_meeting(x + obj_player.velX, y, obj_parWall))
 obj_player.x += obj_player.velX;
 
 ///Vertical movement and collision detects if there is a wall or a ramp then moves player according
-/* if(place_meeting(x, y + obj_player.velY, obj_hill_br))
-{
-    
-}
-if(place_meeting(x, y + obj_player.velY, obj_hill_bl))
-{
-}
-if(place_meeting(x, y + obj_player.velY, obj_hill_tr))
-{
-}
-if(place_meeting(x, y + obj_player.velY, obj_hill_tl))
-{
-}
-if(place_meeting(x, y + obj_player.velY, obj_wall))
-{
-} */
 if(place_meeting(x, y + obj_player.velY, obj_hill_tl) || place_meeting(x, y + obj_player.velY, obj_hill_bl))
 {
     plusX = 0;

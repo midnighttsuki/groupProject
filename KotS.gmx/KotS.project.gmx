@@ -7,50 +7,87 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="player">
-      <sprite>sprites\spr_player_left</sprite>
-      <sprite>sprites\spr_player_right</sprite>
-      <sprite>sprites\spr_player_up</sprite>
-      <sprite>sprites\spr_player_down</sprite>
-      <sprite>sprites\spr_player_upleft</sprite>
-      <sprite>sprites\spr_player_upright</sprite>
-      <sprite>sprites\spr_player_downleft</sprite>
-      <sprite>sprites\spr_player_downright</sprite>
+      <sprites name="Temp">
+        <sprite>sprites\spr_player_up</sprite>
+        <sprite>sprites\spr_player_down</sprite>
+        <sprite>sprites\spr_player_left</sprite>
+        <sprite>sprites\spr_player_right</sprite>
+        <sprite>sprites\spr_player_upleft</sprite>
+        <sprite>sprites\spr_player_upright</sprite>
+        <sprite>sprites\spr_player_downleft</sprite>
+        <sprite>sprites\spr_player_downright</sprite>
+      </sprites>
     </sprites>
-    <sprites name="collisionWalls">
-      <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_hill_br</sprite>
-      <sprite>sprites\spr_hill_bl</sprite>
-      <sprite>sprites\spr_hill_tl</sprite>
-      <sprite>sprites\spr_hill_tr</sprite>
-      <sprite>sprites\spr_wall_round</sprite>
+    <sprites name="NPC">
+      <sprite>sprites\spr_test_npc</sprite>
+      <sprites name="Merchants">
+        <sprite>sprites\spr_test_merch</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\spr_test_enemy</sprite>
+    </sprites>
+    <sprites name="Masks">
+      <sprites name="collisionMasks">
+        <sprite>sprites\spr_wall</sprite>
+        <sprite>sprites\spr_hill_br</sprite>
+        <sprite>sprites\spr_hill_bl</sprite>
+        <sprite>sprites\spr_hill_tl</sprite>
+        <sprite>sprites\spr_hill_tr</sprite>
+        <sprite>sprites\spr_half_top</sprite>
+        <sprite>sprites\spr_line_left</sprite>
+        <sprite>sprites\spr_line_hor</sprite>
+      </sprites>
+      <sprites name="roomMasks">
+        <sprite>sprites\spr_room_warp</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="State Machine">
+      <script>scripts\state_initialize.gml</script>
+    </scripts>
     <scripts name="player">
       <script>scripts\movement_collision.gml</script>
       <script>scripts\check_input.gml</script>
     </scripts>
+    <script>scripts\depth_changer.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fn_default</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_player</object>
+    <objects name="player">
+      <object>objects\obj_player</object>
+    </objects>
     <objects name="GameControl">
+      <object>objects\obj_parWall</object>
+      <object>objects\obj_parNPC</object>
       <object>objects\obj_game</object>
       <object>objects\Inputs</object>
     </objects>
-    <objects name="collisionWalls">
-      <object>objects\obj_wall</object>
-      <object>objects\obj_hill_br</object>
-      <object>objects\obj_hill_bl</object>
-      <object>objects\obj_hill_tl</object>
-      <object>objects\obj_hill_tr</object>
-      <object>objects\obj_parWall</object>
-      <object>objects\obj_wall_round</object>
+    <objects name="Masks">
+      <objects name="collisionWalls">
+        <object>objects\obj_wall</object>
+        <object>objects\obj_hill_br</object>
+        <object>objects\obj_hill_bl</object>
+        <object>objects\obj_hill_tl</object>
+        <object>objects\obj_hill_tr</object>
+        <object>objects\obj_top_half_wall</object>
+        <object>objects\obj_line_wall_hor</object>
+        <object>objects\obj_line_ver</object>
+      </objects>
+      <object>objects\obj_room_warp</object>
+    </objects>
+    <objects name="NPC">
+      <object>objects\obj_temp_npc</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_collision_test</room>
+    <room>rooms\rm_test_0</room>
+    <room>rooms\rm_test_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

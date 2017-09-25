@@ -6,10 +6,10 @@
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
-  <bboxmode>2</bboxmode>
+  <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>127</bbox_right>
-  <bbox_top>40</bbox_top>
+  <bbox_top>0</bbox_top>
   <bbox_bottom>127</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -20,6 +20,6 @@
   <width>128</width>
   <height>128</height>
   <frames>
-    <frame index="0">images\spr_player_up_0.png</frame>
+    <frame index="0">images\spr_test_merch_0.png</frame>
   </frames>
 </sprite>

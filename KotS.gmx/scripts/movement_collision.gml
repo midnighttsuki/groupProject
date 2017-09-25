@@ -20,6 +20,7 @@ switch(state)
         sprite_index = obj_player.player[0];
         obj_player.velX = 0;
         obj_player.velY = -obj_player.playerSpeed;
+        obj_player.p_direction = 90;
         
         
               
@@ -33,6 +34,8 @@ switch(state)
         sprite_index = obj_player.player[1];
         obj_player.velX = 0;
         obj_player.velY = obj_player.playerSpeed;
+        obj_player.p_direction = 270;
+        
         
         
         check_input();
@@ -44,7 +47,8 @@ switch(state)
         image_speed = obj_player.anime;
         sprite_index = obj_player.player[2];
         obj_player.velX = -obj_player.playerSpeed;
-        obj_player.velY = 0
+        obj_player.velY = 0;
+        obj_player.p_direction = 180;
         
         
         
@@ -57,6 +61,7 @@ switch(state)
         sprite_index = obj_player.player[3];
         obj_player.velX = obj_player.playerSpeed;
         obj_player.velY = 0;
+        obj_player.p_direction = 0;
         
         
         
@@ -69,6 +74,7 @@ switch(state)
         sprite_index = obj_player.player[4];
         obj_player.velX = -obj_player.playerSpeed;
         obj_player.velY = -obj_player.playerSpeed;
+        obj_player.p_direction = 135;
         
         
         
@@ -93,6 +99,7 @@ switch(state)
         sprite_index = obj_player.player[6];
         obj_player.velX = -obj_player.playerSpeed;
         obj_player.velY = obj_player.playerSpeed;
+        obj_player.p_direction = 225;
         
         
         
@@ -105,6 +112,7 @@ switch(state)
         sprite_index = obj_player.player[7];
         obj_player.velX = obj_player.playerSpeed;
         obj_player.velY = obj_player.playerSpeed;
+        obj_player.p_direction = 315;
         
         
         
@@ -184,13 +192,13 @@ if(place_meeting(x, y + obj_player.velY, obj_hill_tl) || place_meeting(x, y + ob
 if(place_meeting(x, y + obj_player.velY, obj_parWall))
 {
     plusX = 0;
-    while(place_meeting(x - plusX, y + obj_player.velY, obj_parWall) && plusX <= abs(obj_player.velY))
+    while(place_meeting(x - plusX, y + obj_player.velY, obj_parWall ) && plusX <= abs(obj_player.velY))
     {
         plusX += 1;
     }
-    if(place_meeting(x - plusX, y + obj_player.velY, obj_parWall))
+    if(place_meeting(x - plusX, y + obj_player.velY, obj_parWall ))
     {
-        while(!place_meeting(x, y + sign(obj_player.velY), obj_parWall))
+        while(!place_meeting(x, y + sign(obj_player.velY), obj_parWall ))
         {
             obj_player.y += sign(obj_player.velY);
         }

@@ -36,7 +36,7 @@
         <sprite>sprites\spr_hill_tr</sprite>
         <sprite>sprites\spr_half_top</sprite>
         <sprite>sprites\spr_line_left</sprite>
-        <sprite>sprites\spr_line_hor</sprite>
+        <sprite>sprites\spr_line_down</sprite>
       </sprites>
       <sprites name="roomMasks">
         <sprite>sprites\spr_room_warp</sprite>

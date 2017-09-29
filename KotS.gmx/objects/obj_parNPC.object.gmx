@@ -25,7 +25,70 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth_changer();
+            <string>write_text = false;
+text_count = 0;
+text_line = 0;
+text[0] = "Hey, your string is broken.";
+depth_changer();
+state_initialize();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>state_process(st_npc_standing);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if(write_text == true){
+    draw_set_font(fn_default);
+    draw_set_color(c_white);
+    draw_rectangle(200,view_hview -800, view_wview -200, view_hview -200,false);
+    draw_set_color(c_black);
+    draw_text(232,view_hview -750,string_copy(text[text_line], 1, text_count));
+    
+    
+    if(text_count &lt;= string_length(text[text_line])){
+        text_count++;
+    }
+}
 </string>
           </argument>
         </arguments>

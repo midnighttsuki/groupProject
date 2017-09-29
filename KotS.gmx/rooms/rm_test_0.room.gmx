@@ -87,7 +87,7 @@
     <instance objName="obj_hill_bl" x="768" y="1664" name="inst_FE8C9C2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hill_br" x="384" y="1664" name="inst_90ECC1CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="320" y="288" name="inst_3A7E9532" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game" x="0" y="0" name="inst_50F5CED2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Game" x="0" y="0" name="inst_50F5CED2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_line_wall_hor" x="480" y="2016" name="inst_F92C593C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_line_wall_hor" x="480" y="2176" name="inst_E7EAD4C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_line_ver" x="320" y="2016" name="inst_9A6449F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -102,7 +102,7 @@
     <instance objName="obj_line_ver" x="1824" y="2016" name="inst_70E11287" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hill_br" x="1440" y="2176" name="inst_C05C268C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hill_tl" x="1344" y="2016" name="inst_EA65513E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_room_warp" x="2560" y="1376" name="inst_C551C326" locked="0" code="player_target_x = 63;&#xA;player_target_y = 1535;&#xA;room_warp_to = rm_test_1;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_room_warp" x="2560" y="1376" name="inst_C551C326" locked="0" code="player_target_x = 63;&#xA;player_target_y = 1535;&#xA;room_warp_to = rm_test_1;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

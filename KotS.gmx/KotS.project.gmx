@@ -48,12 +48,25 @@
   <scripts name="scripts">
     <scripts name="State Machine">
       <script>scripts\state_initialize.gml</script>
+      <script>scripts\state_switch.gml</script>
+      <script>scripts\state_process.gml</script>
     </scripts>
-    <scripts name="player">
-      <script>scripts\movement_collision.gml</script>
+    <scripts name="States">
+      <scripts name="player">
+        <script>scripts\st_player_standing.gml</script>
+        <script>scripts\st_player_walk.gml</script>
+      </scripts>
+      <scripts name="NPC">
+        <script>scripts\st_npc_standing.gml</script>
+        <script>scripts\st_npc_talking.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Utilities">
+      <script>scripts\depth_changer.gml</script>
       <script>scripts\check_input.gml</script>
+      <script>scripts\movement_collision.gml</script>
+      <script>scripts\collision.gml</script>
     </scripts>
-    <script>scripts\depth_changer.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fn_default</font>
@@ -65,7 +78,7 @@
     <objects name="GameControl">
       <object>objects\obj_parWall</object>
       <object>objects\obj_parNPC</object>
-      <object>objects\obj_game</object>
+      <object>objects\Game</object>
       <object>objects\Inputs</object>
     </objects>
     <objects name="Masks">

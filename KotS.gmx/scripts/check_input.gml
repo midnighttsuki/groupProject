@@ -1,4 +1,7 @@
 //checks input for what key
+if(Inputs.start){
+    game_end();
+}
 if(Inputs.up) 
 {
     obj_player.pState = "UP";

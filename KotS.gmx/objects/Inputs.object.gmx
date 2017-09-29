@@ -63,7 +63,7 @@ right = keyboard_check(ord('D'));
 up = keyboard_check(ord('W'));
 down = keyboard_check(ord('S'));
 button_1 = keyboard_check_pressed(vk_space);
-
+start = keyboard_check_pressed(vk_escape);
 </string>
           </argument>
         </arguments>

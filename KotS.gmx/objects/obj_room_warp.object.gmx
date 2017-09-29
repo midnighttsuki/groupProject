@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_target_x = 0;
-player_target_y = 0;
-room_warp_to = 0;
+            <string>player_target_x = 0; ///players start location on X
+player_target_y = 0; ///players start location on Y
+room_warp_to = 0;   ///sets room location
 </string>
           </argument>
         </arguments>

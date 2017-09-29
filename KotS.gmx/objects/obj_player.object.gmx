@@ -44,11 +44,11 @@ playerSprite[5] = spr_player_upright;
 playerSprite[6] = spr_player_downleft;
 playerSprite[7] = spr_player_downright;
 
-//warp var
+///warp var
 player_x = xstart;
 player_y = ystart;
 
-//initializes state machine
+///initializes state machine
 state_initialize();
 </string>
           </argument>
@@ -72,8 +72,8 @@ state_initialize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state_process(st_player_standing);
-depth_changer();
+            <string>state_process(st_player_standing); ///sets player in it's default state
+depth_changer(); ///changes depth according to location
 </string>
           </argument>
         </arguments>
@@ -96,9 +96,9 @@ depth_changer();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(other.room_warp_to);
-x = other.player_target_x;
-y = other.player_target_y;
+            <string>room_goto(other.room_warp_to); ///warps player to the room the tile sets in the room
+x = other.player_target_x; ///sets players x start location when entering room
+y = other.player_target_y; ///sets players y start location when entering room
 </string>
           </argument>
         </arguments>

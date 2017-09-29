@@ -58,7 +58,7 @@
     <instance objName="obj_wall" x="0" y="0" name="inst_79DF6DB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_top_half_wall" x="128" y="0" name="inst_EC8C7F93" locked="0" code="" scaleX="18" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_room_warp" x="-128" y="1376" name="inst_0F4297A7" locked="0" code="player_target_x = 2495;&#xA;player_target_y = 1503;&#xA;room_warp_to = rm_test_0;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_temp_npc" x="1216" y="1280" name="inst_0DF293F4" locked="0" code="text[0] = &quot;I am the first ever NPC. Belive it or not. I like to#be alive.&quot; &#xA;text[1] = &quot;What? Your still here?&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_temp_npc" x="1216" y="1280" name="inst_0DF293F4" locked="0" code="text[0] = &quot;I am the first ever NPC. Belive it or not. I like to#be alive.&quot; &#xA;text[1] = &quot;What? Your still here?&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

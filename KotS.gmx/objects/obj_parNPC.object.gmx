@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>write_text = false;
-text_count = 0;
-text_line = 0;
-text[0] = "Hey, your string is broken.";
-depth_changer();
-state_initialize();
+            <string>write_text = false; ///if true creates a text box
+text_count = 0; ///counts how many letters are left in the string
+text_line = 0;  ///counts how many lines are in the string
+text[0] = "Hey, if you see this report it."; ///used for each line the npc says.
+depth_changer(); ///changes depth of NPC according to player
+state_initialize(); ///initializes the state machine for the npc
 </string>
           </argument>
         </arguments>
@@ -53,7 +53,7 @@ state_initialize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state_process(st_npc_standing);
+            <string>state_process(st_npc_standing); ///calls npc's default state
 </string>
           </argument>
         </arguments>
@@ -76,7 +76,9 @@ state_initialize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>///draws npc
+draw_self();
+///draws text box
 if(write_text == true){
     draw_set_font(fn_default);
     draw_set_color(c_white);

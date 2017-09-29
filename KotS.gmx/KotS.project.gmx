@@ -64,7 +64,6 @@
     <scripts name="Utilities">
       <script>scripts\depth_changer.gml</script>
       <script>scripts\check_input.gml</script>
-      <script>scripts\movement_collision.gml</script>
       <script>scripts\collision.gml</script>
     </scripts>
   </scripts>

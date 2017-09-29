@@ -1,7 +1,7 @@
 ///movement_collision();
 
 ///Checks the state the player is in. Then switch the sprite and vel to corresponding direction.
-switch(state) 
+/*switch(state) 
 {
     case "IDLE":
     {
@@ -17,7 +17,7 @@ switch(state)
     case "UP":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[0];
+        sprite_index = obj_player.playerSprite[0];
         obj_player.velX = 0;
         obj_player.velY = -obj_player.playerSpeed;
         obj_player.p_direction = 90;
@@ -31,7 +31,7 @@ switch(state)
     case "DOWN": 
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[1];
+        sprite_index = obj_player.playerSprite[1];
         obj_player.velX = 0;
         obj_player.velY = obj_player.playerSpeed;
         obj_player.p_direction = 270;
@@ -45,7 +45,7 @@ switch(state)
     case "LEFT": 
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[2];
+        sprite_index = obj_player.playerSprite[2];
         obj_player.velX = -obj_player.playerSpeed;
         obj_player.velY = 0;
         obj_player.p_direction = 180;
@@ -58,7 +58,7 @@ switch(state)
     case "RIGHT":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[3];
+        sprite_index = obj_player.playerSprite[3];
         obj_player.velX = obj_player.playerSpeed;
         obj_player.velY = 0;
         obj_player.p_direction = 0;
@@ -71,7 +71,7 @@ switch(state)
     case "UPLEFT":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[4];
+        sprite_index = obj_player.playerSprite[4];
         obj_player.velX = -obj_player.playerSpeed;
         obj_player.velY = -obj_player.playerSpeed;
         obj_player.p_direction = 135;
@@ -84,7 +84,7 @@ switch(state)
     case "UPRIGHT":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[5];
+        sprite_index = obj_player.playerSprite[5];
         obj_player.velX = obj_player.playerSpeed;
         obj_player.velY = -obj_player.playerSpeed;
         
@@ -96,7 +96,7 @@ switch(state)
     case "DOWNLEFT":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[6];
+        sprite_index = obj_player.playerSprite[6];
         obj_player.velX = -obj_player.playerSpeed;
         obj_player.velY = obj_player.playerSpeed;
         obj_player.p_direction = 225;
@@ -109,7 +109,7 @@ switch(state)
     case "DOWNRIGHT":
     {
         image_speed = obj_player.anime;
-        sprite_index = obj_player.player[7];
+        sprite_index = obj_player.playerSprite[7];
         obj_player.velX = obj_player.playerSpeed;
         obj_player.velY = obj_player.playerSpeed;
         obj_player.p_direction = 315;
@@ -212,3 +212,4 @@ if(place_meeting(x, y + obj_player.velY, obj_parWall))
     
 }
 obj_player.y += obj_player.velY;
+*/

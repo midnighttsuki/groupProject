@@ -35,6 +35,7 @@ button_1 = false;
 button_2 = false;
 button_3 = false;
 button_4 = false;
+inputPressed = false;
 </string>
           </argument>
         </arguments>
@@ -57,11 +58,12 @@ button_4 = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left = keyboard_check(vk_left);
-right = keyboard_check(vk_right);
-up = keyboard_check(vk_up);
-down = keyboard_check(vk_down);
+            <string>left = keyboard_check(ord('A'));
+right = keyboard_check(ord('D'));
+up = keyboard_check(ord('W'));
+down = keyboard_check(ord('S'));
 button_1 = keyboard_check_pressed(vk_space);
+
 </string>
           </argument>
         </arguments>

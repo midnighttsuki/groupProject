@@ -2,7 +2,7 @@
 ///Talking to NPC
 
 ///checks if the player is 60 pixels or less away.
-if(distance_to_object(obj_player)< 60){
+if(distance_to_object(obj_player)< 180){
     var xx = obj_player.x + 160 * cos(degtorad(obj_player.p_direction)); ///checks what direction the player is facing
     var yy = obj_player.y - 160 * sin(degtorad(obj_player.p_direction));
     ///checks if the direction of the player is facing the npc.

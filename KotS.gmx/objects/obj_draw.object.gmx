@@ -4,8 +4,8 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
-  <parentName>obj_parDepth</parentName>
+  <persistent>-1</persistent>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,17 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>write_text = false; ///if true creates a text box
-text_count = 0; ///counts how many letters are left in the string
-text_line = 0;  ///counts how many lines are in the string
-text[0] = "Hey, if you see this report it."; ///used for each line the npc says.
-state_initialize(); ///initializes the state machine for the npc
+            <string>///creates var
+ds_depthgrid = ds_grid_create(2,1);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="7" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,7 +49,9 @@ state_initialize(); ///initializes the state machine for the npc
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state_process(st_npc_standing); ///calls npc's default state
+            <string>if(ds_exists(ds_depthgrid,ds_type_grid)){
+    ds_grid_destroy(ds_depthgrid);
+}
 </string>
           </argument>
         </arguments>
@@ -75,18 +74,37 @@ state_initialize(); ///initializes the state machine for the npc
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///draws text box
-if(write_text == true){
-    draw_set_font(fn_default);
-    draw_set_color(c_white);
-    draw_rectangle(200,view_hview -800, view_wview -200, view_hview -200,false);
-    draw_set_color(c_black);
-    draw_text(232,view_hview -750,string_copy(text[text_line], 1, text_count));
+            <string>if(ds_exists(ds_depthgrid, ds_type_grid)){
+
+    var depthgrid = ds_depthgrid;
+    var insNum = instance_number(obj_parDepth); 
+    ///resizes grid
+    ds_grid_resize(depthgrid, 2,  insNum);
+    var yy = 0;
     
+    with(obj_parDepth){
     
-    if(text_count &lt;= string_length(text[text_line])){
-        text_count++;
+        ///add its self to the grid
+        depthgrid[# 0, yy] = id;
+        ///add its y value 
+        depthgrid[# 1, yy] = y;
+        yy += 1;
     }
+    
+    ///sort the grid by Y value
+    ds_grid_sort(ds_depthgrid,1,true);
+
+        yy = 0;
+    repeat(insNum){
+        var instanceID = ds_depthgrid[# 0, yy];
+       
+        with(instanceID){
+            draw_self();
+       }
+       yy += 1;
+    }
+    
+    ds_grid_clear(ds_depthgrid,0);
 }
 </string>
           </argument>

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_parDepth</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,7 +28,7 @@
             <string>///Set and declare player var
 anime = 0; ///players
 pState = "IDLE" ///Default player set
-playerSpeed = 8; ///sets how many pixels the player will move
+playerSpeed = 16; ///sets how many pixels the player will move
 velX = 0; ///used to move the player on his X axis
 velY= 0;    ///used to move the player on his Y axis
 p_direction = 0; ///tells what direction the player is facing.
@@ -73,7 +73,6 @@ state_initialize();
           <argument>
             <kind>1</kind>
             <string>state_process(st_player_standing); ///sets player in it's default state
-depth_changer(); ///changes depth according to location
 </string>
           </argument>
         </arguments>

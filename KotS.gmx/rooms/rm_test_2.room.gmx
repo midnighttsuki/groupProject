@@ -11,7 +11,7 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>-1</enableViews>
+  <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="5120" hview="5120" xport="0" yport="0" wport="1280" hport="1280" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -51,21 +51,13 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_temp_npc" x="2604" y="2524" name="inst_EDA6D17E" locked="0" code="text[0] = &quot;Welcome to the NPC room. Here you should find a merchant, A woundering NPC,# and one that tries to avoid you.&quot;;&#xA;text[1] = &quot;The room to the Left is the collision room. This is where you can test# the collision detection. Later there will be away to change your speed in that room.&quot;;&#xA;text[2] = &quot;The room below is a dark one indeed. That is where we test# the enemeies.&quot;;&#xA;text[3] = &quot;The right room will be the puzzle test room. Thats where the# objects are for puzzles that we can test.&quot;;&#xA;text[4] = &quot;Finally the room above us is.... I really don't know....&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="708" y="792" name="inst_6AF4B38E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_room_warp" x="-128" y="2823" name="inst_24FEB128" locked="0" code="player_target_x = 4824;&#xA;player_target_y = 2560;&#xA;room_warp_to = rm_test_0;&#xA;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_room_warp" x="2560" y="5376" name="inst_9AAECD69" locked="0" code="player_target_x = 2560; ///players start location on X&#xA;player_target_y = 168; ///players start location on Y&#xA;room_warp_to = rm_test_2;   ///sets room location&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Game" x="0" y="0" name="inst_DA8AFA05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="128" y="5120" name="inst_A2CEAFF0" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="128" y="2304" name="inst_BBD1F5F6" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="0" y="128" name="inst_DDDCC9DA" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="-90"/>
-    <instance objName="obj_wall" x="2816" y="128" name="inst_13AAC43E" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="-90"/>
-    <instance objName="obj_wall" x="4992" y="2304" name="inst_C5BCED71" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="4992" y="5120" name="inst_99C8EF1B" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="0" y="4992" name="inst_9EB0B0BA" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="-90"/>
-    <instance objName="obj_wall" x="2816" y="4992" name="inst_FE9B8251" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="-90"/>
-    <instance objName="obj_wall" x="5248" y="2816" name="inst_33697748" locked="0" code="" scaleX="1" scaleY="2.0078432559967" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="2304" y="-128" name="inst_1B87C372" locked="0" code="" scaleX="1" scaleY="2.0078432559967" colour="4294967295" rotation="-90"/>
+    <instance objName="obj_test_enemy" x="2304" y="2560" name="inst_8D57AEF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_room_warp" x="2560" y="0" name="inst_A02D3298" locked="0" code="player_target_x = 2560;&#xA;player_target_y = 5080;&#xA;room_warp_to = rm_test_1;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="4992" name="inst_3212B1B6" locked="0" code="" scaleX="1" scaleY="19.99609375" colour="4294967295" rotation="-90"/>
+    <instance objName="obj_wall" x="128" y="5120" name="inst_AD494D74" locked="0" code="" scaleX="1" scaleY="19.99609375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="4992" y="5120" name="inst_40FDBFE7" locked="0" code="" scaleX="1" scaleY="19.99609375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1152" y="256" name="inst_E65D9561" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="3968" y="256" name="inst_1A9BF596" locked="0" code="" scaleX="9" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

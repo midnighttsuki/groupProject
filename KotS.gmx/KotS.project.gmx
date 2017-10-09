@@ -7,7 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="player">
-      <sprites name="Temp">
+      <sprites name="Moving">
         <sprite>sprites\spr_player_up</sprite>
         <sprite>sprites\spr_player_down</sprite>
         <sprite>sprites\spr_player_left</sprite>
@@ -34,7 +34,6 @@
         <sprite>sprites\spr_hill_bl</sprite>
         <sprite>sprites\spr_hill_tl</sprite>
         <sprite>sprites\spr_hill_tr</sprite>
-        <sprite>sprites\spr_half_top</sprite>
         <sprite>sprites\spr_line_left</sprite>
         <sprite>sprites\spr_line_down</sprite>
       </sprites>
@@ -42,9 +41,12 @@
         <sprite>sprites\spr_room_warp</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sprite21</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\test_path_1</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="State Machine">
       <script>scripts\state_initialize.gml</script>
@@ -62,7 +64,6 @@
       </scripts>
     </scripts>
     <scripts name="Utilities">
-      <script>scripts\depth_changer.gml</script>
       <script>scripts\check_input.gml</script>
       <script>scripts\collision.gml</script>
     </scripts>
@@ -75,6 +76,7 @@
       <object>objects\obj_player</object>
     </objects>
     <objects name="GameControl">
+      <object>objects\obj_parDepth</object>
       <object>objects\obj_parWall</object>
       <object>objects\obj_parNPC</object>
       <object>objects\Game</object>
@@ -87,7 +89,6 @@
         <object>objects\obj_hill_bl</object>
         <object>objects\obj_hill_tl</object>
         <object>objects\obj_hill_tr</object>
-        <object>objects\obj_top_half_wall</object>
         <object>objects\obj_line_wall_hor</object>
         <object>objects\obj_line_ver</object>
       </objects>
@@ -95,11 +96,16 @@
     </objects>
     <objects name="NPC">
       <object>objects\obj_temp_npc</object>
+      <objects name="Enemies">
+        <object>objects\obj_test_enemy</object>
+      </objects>
     </objects>
+    <object>objects\object17</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test_0</room>
     <room>rooms\rm_test_1</room>
+    <room>rooms\rm_test_0</room>
+    <room>rooms\rm_test_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
